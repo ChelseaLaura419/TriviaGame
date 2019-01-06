@@ -1,10 +1,15 @@
 body{
     font-size: 20px;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #333;
 }
+
+.block{
+    margin: 15px;
+}
 .question{
-    font-weight: 600;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #d30243;
 }
 .answers {
   margin-bottom: 20px;
@@ -12,17 +17,27 @@ body{
 .answers label{
   display: block;
 }
-#submit{
-    font-family: sans-serif;
+
+#quizTime{
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    background-color: #279;
+    background-color: #d30243;
     color: #fff;
-    border: 0px;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#submit{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: #d30243;
+    color: #fff;
     border-radius: 3px;
     padding: 20px;
     cursor: pointer;
     margin-bottom: 20px;
 }
 #submit:hover{
-    background-color: #38a;
+    background-color: #4e0119;
 }

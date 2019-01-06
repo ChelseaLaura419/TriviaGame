@@ -38,7 +38,7 @@
 
       if (userAnswer === currentQuestion.correctAnswer) {
         numCorrect++;
-        answerContainers[questionNumber].style.color = "lightgreen";
+        answerContainers[questionNumber].style.color = "green";
       } else {
         answerContainers[questionNumber].style.color = "red";
       }
@@ -90,10 +90,70 @@
           d: "Amity Island"
         },
         correctAnswer: "d"
+      },
+      {
+        question: "What was the nickname director Steven Spielberg gave to the mechanical shark?",
+        answers: {
+          a: "Bruce",
+          b: "Ralph",
+          c: "Elliot",
+          d: "Timmy"
+        },
+        correctAnswer: "a"
+      },
+      {
+        question: "Who wrote the original book, Jaws?",
+        answers: {
+          a: "Steven Spielberg",
+          b: "Stephen King",
+          c: "Michael Crinchton",
+          d: "Peter Benchley"
+        },
+        correctAnswer: "d"
+      },
+      {
+        question: "What is the name of Quint's Boat?",
+        answers: {
+          a: "Largo",
+          b: "Jenny II",
+          c: "Orca",
+          d: "Queen Elizabeth"
+        },
+        correctAnswer: "c"
+      },
+      {
+        question: "What instrument is used to produce the musical effect that warns viewers that the shark is approaching?",
+        answers: {
+          a: "Clarinet",
+          b: "Tuba",
+          c: "Oboe",
+          d: "Piano"
+        },
+        correctAnswer: "b"
       }
+
+      
   ];
 
   buildQuiz();
 
   submitButton.addEventListener("click", showResults);
 })();
+
+var totalSeconds = 60*1;
+var clockMinutes = parseInt(totalSeconds/60);
+var clockSeconds = parseInt(totalSeconds%60);
+
+function checkTime(){
+  document.getElementById("quizTime").innerHTML = 'Time Left: ' + clockMinutes + ' mins ' + clockSeconds + ' secs';
+  if (totalSeconds <= 0){
+    alert("Time's Up!");
+    submitButton.disabled = true; 
+    }
+  else {
+    totalSeconds = totalSeconds -1;
+    clockMinutes = parseInt(totalSeconds/60);
+    clockSeconds = parseInt(totalSeconds%60);
+  setTimeout("checkTime()", 1000);
+  }}
+  setTimeout("checkTime()", 1000);
