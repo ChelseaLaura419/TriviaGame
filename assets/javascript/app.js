@@ -130,6 +130,26 @@
           d: "Piano"
         },
         correctAnswer: "b"
+      },
+      {
+        question: "What is Hooper's profession?",
+        answers: {
+          a: "Journalist",
+          b: "Sea World Trainer",
+          c: "Police Officer",
+          d: "Marine Biologist"
+        },
+        correctAnswer: "d"
+      },
+      {
+        question: "Who Survives their encounter with the shark?",
+        answers: {
+          a: "Quint and Brody",
+          b: "Hooper and Quint",
+          c: "Brody and Hooper",
+          d: "All of them"
+        },
+        correctAnswer: "c"
       }
 
       
@@ -140,7 +160,7 @@
   submitButton.addEventListener("click", showResults);
 })();
 
-var totalSeconds = 60*1;
+var totalSeconds = 60*2;
 var clockMinutes = parseInt(totalSeconds/60);
 var clockSeconds = parseInt(totalSeconds%60);
 
